@@ -1,5 +1,5 @@
-package org.example.aplication;
-import org.example.entities.Triangle;
+package aplication;
+import entities.Triangle;
 import java.util.Scanner;
 
 public class Main {
