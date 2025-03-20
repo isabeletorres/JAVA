@@ -10,20 +10,20 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Products products = new Products();
         System.out.println("Enter product data: ");
         System.out.print("Name: ");
-        products.setName(sc.next());
+        String name = sc.nextLine();
         System.out.print("Price: ");
-        products.setPrice(sc.nextDouble());
+        double price = sc.nextDouble();
         System.out.print("Quantity in stock: ");
-        products.setQuantity(sc.nextInt());
+        int quantity = sc.nextInt();
+        Products products = new Products(name, price, quantity);
 
         System.out.println("\nProduct data: "+products);
 
         System.out.print("\nEnter the number of products to be added in stock: ");
-        int quantity = sc.nextInt();
-        products.addProducts(quantity);
+        int quantitys = sc.nextInt();
+        products.addProducts(quantitys);
 
         System.out.println("\nUpdated data: "+products);
 
