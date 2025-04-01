@@ -34,6 +34,8 @@ public class Main {
                    if (i < matriz.length-1) {
                        System.out.println("Down: " + matriz[i+1][j]);
                    }
+               } else {
+                   System.out.println("Não foi possível encontrar o valor");
                }
             }
         }
