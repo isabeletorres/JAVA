@@ -22,5 +22,8 @@ public class SavingsAccount extends Account{
         balance += balance* interestRate;
     }
 
-
+    @Override
+    public void whithdraw(Double amount){
+        balance -= amount;
+    }
 }

@@ -1,24 +1,21 @@
 package application;
 
-import entities.Account;
-import entities.BusinessAccount;
-import entities.SavingsAccount;
+import entities.*;
 
 public class Main {
     public static void main(String[] args) {
-        Account account = new Account(1001, "Alex", 0.0);
-        BusinessAccount businessAccount = new BusinessAccount(1002, " Maria", 0.0, 500.0);
 
-        //Upcasting
+        Account account = new Account(1001, "Alex", 1000.0);
+        account.whithdraw(200.0);
 
-        Account acc1 = businessAccount;
-        Account acc2 = new BusinessAccount(1003, "Bob", 0.0, 200.0);
-        Account acc3 = new SavingsAccount(1004, "Anna", 0.0, 0.01);
+        System.out.println(account.getBalance());
 
-        //Dowcansting
+        Account acc1 = new SavingsAccount(1002, "Maria", 1000.0, 0.01);
 
-        BusinessAccount acc4 = (BusinessAccount) acc2;
-        acc4.loan(100.0);
+        acc1.whithdraw(200.0);
+
+        System.out.println(acc1.getBalance());
+
 
     }
 }
