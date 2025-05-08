@@ -1,9 +1,7 @@
 package application;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Scanner;
+import java.text.*;
+import java.util.*;
 
 import model.entities.Reservation;
 import model.exceptions.DomainException;
